@@ -1,4 +1,86 @@
 
-h1 {
-  color: $blue;
+$jumbo-font: 60px;
+$title-font: 48px;
+$h3-size: 36px;
+
+$title-family: 'Montserrat', sans-serif;
+$paragraph-family: 'Source Sans Pro', sans-serif;
+
+h1.jumbo {
+	font-family: $title-family;
+	color: $light-main;
+	font-size: $jumbo-font;
+
+	@media screen and (max-width: $sm-screen) {
+		font-size: 24px;
+	}
+}
+
+h2 {
+	font-family: $title-family;
+	font-size: $title-font;
+	font-weight: 400;
+	color: $light-main;
+}
+
+h3 {
+	font-family: $paragraph-family;
+	font-size: $h3-size;
+	font-weight: 400;
+	color: $light-main;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+
+		font-family: $paragraph-family;
+		font-size: 18px;
+		color: $light-main;
+		line-height: 1.8;
+
+		margin-right: 2em;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media screen and (max-width: $sm-screen) {
+			font-size: 14px;
+		}
+
+		a {
+			text-decoration: none;
+			color: $highlight-main;
+			font-family: $title-family;
+			// border-bottom: 1px solid $highlight-main;
+		}
+	}
+}
+
+p {
+	font-family: $paragraph-family;
+	font-size: 18px;
+	color: $light-main;
+	line-height: 1.8;
+
+	@media screen and (max-width: $sm-screen) {
+		font-size: 14px;
+	}
+
+	a {
+		text-decoration: none;
+		color: $light-main;
+		border-bottom: 1px solid $highlight-main;
+
+		@media screen and (max-width: $sm-screen) {
+			font-size: 14px;
+		}
+	}
 }
